@@ -1,0 +1,17 @@
+{
+  "name": "world-cup-2026-dashboard",
+  "version": "1.0.0",
+  "description": "Free World Cup 2026 Live Intelligence Dashboard",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:backend": "cd backend && npm install",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "build": "npm run build:backend && npm run build:frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

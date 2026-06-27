@@ -1,0 +1,88 @@
+.teams-container {
+  width: 100%;
+}
+
+.search-box {
+  margin: 20px 0;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border: 1px solid #d5d9d2;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-box input:focus {
+  border-color: #303F30;
+  box-shadow: 0 0 0 3px rgba(48, 63, 48, 0.1);
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.team-card {
+  background: #C5DDCE;
+  border: 1px solid #90B3A1;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  border-color: #111B1A;
+  box-shadow: 0 4px 12px rgba(17, 27, 26, 0.1);
+}
+
+.team-flag {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.team-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111B1A;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.team-card p {
+  font-size: 11px;
+  color: #5E7559;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #7d8c88;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .teams-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .team-flag {
+    font-size: 24px;
+  }
+
+  .team-card h3 {
+    font-size: 12px;
+  }
+}

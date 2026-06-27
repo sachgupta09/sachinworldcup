@@ -1,0 +1,161 @@
+:root {
+  --navy-dark: #111B1A;
+  --navy: #303F30;
+  --clay: #ADAE29;
+  --mist: #90B3A1;
+  --ivory: #C5DDCE;
+  --dark-bg: #1a2620;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--ivory);
+  color: var(--navy-dark);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: var(--navy-dark);
+  color: white;
+  padding: 30px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--navy);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brand h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand .subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--mist);
+  text-transform: uppercase;
+}
+
+.last-updated {
+  font-size: 12px;
+  color: var(--mist);
+  text-align: right;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--navy);
+  display: flex;
+  gap: 0;
+  padding: 0;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--navy-dark);
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  background: transparent;
+  color: var(--mist);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  color: var(--clay);
+  background: var(--navy-dark);
+}
+
+.nav-btn.active {
+  color: var(--clay);
+  border-bottom-color: var(--clay);
+  background: var(--navy-dark);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 40px 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--navy-dark);
+}
+
+/* Loading & Error */
+.loading {
+  padding: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--navy);
+}
+
+.error {
+  padding: 20px;
+  background: #ffebee;
+  color: #c62828;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .navbar {
+    gap: 0;
+  }
+
+  .nav-btn {
+    flex: 1;
+    font-size: 11px;
+    padding: 12px 10px;
+  }
+
+  .main-content {
+    padding: 20px 20px;
+  }
+
+  .main-content h2 {
+    font-size: 24px;
+  }
+}
